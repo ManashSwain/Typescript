@@ -103,3 +103,45 @@ To compile javascript file
 -  Never
 
 -  Unknown
+
+
+
+## string
+
+```javascript
+
+const name : string = "manash";
+
+```
+
+## number
+
+```javascript
+
+const value : number = 78;
+
+```
+
+
+## boolean
+
+```javascript
+
+const isLoggedIn : boolean = true;
+
+```
+
+
+## any
+
+- any is not a datatype
+
+-In typescript if we use any the compiler will stop checking for types
+
+## any
+
+```javascript
+
+const value : any = true;
+
+```
