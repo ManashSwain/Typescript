@@ -76,3 +76,30 @@ To compile javascript file
 ```bash
   node filename.js
 ```
+
+
+## Types in typescript
+
+-  Number
+
+-  String
+
+-  Boolean
+
+-  Null
+
+-  Undefined
+
+-  Void
+
+-  Object
+
+-  Array
+
+-  Tuples
+
+-  Any
+
+-  Never
+
+-  Unknown
