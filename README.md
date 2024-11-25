@@ -237,11 +237,40 @@ function getValue(myvalue : number){
 ### arrays and map
 
 ```javascript
-
+const heros = ["thor" , "superman" , "spiderman"];
+heros.map((hero)=>{
+    return`hero is ${hero}`
+})
 
 
 ```
 
+### other types void and never
+
+### void
+
+- void is a case where function does not return anything
+
+
+```javascript
+ function consoleError(errmsg : string):void{
+    console.log(errmsg)
+ }
+```
+
+
+### never
+
+- never is same as void but incase of never we can do error handling
+
+- never cannot have a reachable end point 
+
+
+```javascript
+ function handleError(errmsg : string):never{
+    throw new Error(errmsg);
+ }
+```
 
 
 
