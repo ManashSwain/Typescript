@@ -20,6 +20,10 @@ static checking is analyzing the code as we type
 
 Typescript is all about typesafety
 
+File extension is .ts
+
+File extension with jsx component is .tsx
+
 
 ## Below mentioned cases can be avoided in typescript
 
@@ -59,4 +63,16 @@ To check the  npm version
 
 ```bash
   npm -v
+```
+
+To compile typescript file
+
+```bash
+  tsc filename.ts
+```
+
+To compile javascript file
+
+```bash
+  node filename.js
 ```
