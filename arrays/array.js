@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var superHero = [];
+superHero.push("spiderman");
+console.log(superHero);
+var heropower = [];
+heropower.push(2);
+console.log(heropower);
+var heroRating = [];
+heroRating.push(5);
+console.log(heroRating);
