@@ -136,7 +136,7 @@ const isLoggedIn : boolean = true;
 
 - any is not a datatype
 
--In typescript if we use any the compiler will stop checking for types
+- In typescript if we use any the compiler will stop checking for types
 
 ## any
 
@@ -145,3 +145,115 @@ const isLoggedIn : boolean = true;
 const value : any = true;
 
 ```
+
+## Functions in typescript 
+
+### numbers 
+
+```javascript
+
+function  addTwo(num : number){
+  return num+2 ;
+}
+addTwo(3);
+
+```
+
+### strings
+
+
+```javascript
+
+function toUpperCase(str : string){
+  return str.toUpperCase();
+}
+toUpperCase("manash");
+
+```
+
+### multiple values in function
+
+```javascript
+
+function signUpUser(name : string , email : string, isPaid : boolean){}
+
+signUpUser("manash", "m@m.com" , false)
+
+
+```
+
+### giving default values in function
+
+```javascript
+
+function loginUser(name : string , email : string, isPaid : boolean = false){}
+
+loginUser("manash", "m@m.com")
+
+
+```
+
+### modifying default values in function
+
+```javascript
+
+function loginUser(name : string , email : string, isPaid : boolean = false){}
+
+loginUser("manash", "m@m.com" , true)
+
+
+```
+
+### better way to write functions
+
+```javascript
+function addTwo(num : number): number{
+  return num + 2 ;
+}
+```
+
+### arrow functions
+
+```javascript
+const greet = (s:string):string=>{
+  return ` hello ${}`
+}
+```
+
+
+### special functions when return value is unknown
+
+
+```javascript
+
+function getValue(myvalue : number){
+  if(myvalue > 5){
+    return true;
+  }
+  return "200 ok";
+}
+
+```
+### arrays and map
+
+```javascript
+
+
+
+```
+
+
+
+
+
+
+## Usage/Examples
+
+```javascript
+
+```
+
+
+
+
+
