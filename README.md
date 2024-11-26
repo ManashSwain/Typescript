@@ -408,6 +408,97 @@ allUser.push({name : "manash" , age : 21})
 
 ```
 
+### array of array
+
+```javascript
+
+const aiModels : number[][] = []
+
+const allColors:number[] = [255,255,255]
+
+aiModels.push(allColors);
+
+
+console.log(aiModels); // Output: [[255, 255, 255]]
+
+```
+### Union types in typescript
+
+- sometimes you need two or more data types .In these cases  we will have to use union.
+
+```javascript
+let score : string | number = 89 ;
+score = '456' ;
+console.log(score);
+
+```
+
+### other union use cases 
+
+```javascript
+
+type User = {
+    uid : number,
+    name : string
+}
+
+type Admin = {
+    aid : number ,
+    name : string
+}
+
+let loggedInUser : User | Admin = {
+    aid : 84359,
+    name : "manash"
+}
+
+```
+
+###  performing an action based on particular data type
+
+```javascript
+
+function getPass(id: number | string){
+  if(typeof id === "string"){
+    id = id.toUpperCase();
+  }
+  else {
+    id = id.toFixed(2);
+  }
+}
+
+getPass(74);
+getPass("6832");
+
+```
+
+### union in arrays
+
+```javascript
+
+const data1:number[] = [12,34,112];
+const data2:string[] = ["batman" , "superman" , "spiderman"];
+
+```
+### below case can hold either string or number data type but not both
+
+
+```javascript
+
+const data3 : number[] | string[] = ["marvel" , "bollywood"];
+
+```
+
+### below case can hold mix and match of all data types
+
+
+```javascript
+
+const data3 : (string | number | boolean)[] = ["marvel" , "bollywood" , 834 , 34809 , true];
+
+```
+
+
 
 
 
