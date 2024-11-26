@@ -498,6 +498,84 @@ const data3 : (string | number | boolean)[] = ["marvel" , "bollywood" , 834 , 34
 
 ```
 
+### variable of exact match 
+
+```javascript
+
+let seat : "aisle" | "middle" | "window";
+seat = "aisle";
+console.log(seat);
+
+```
+
+
+### tuples 
+
+- In TypeScript, a tuple is a special type of array with a fixed number of elements, where each element has a specific type. It allows you to represent an array where the types of elements are known and fixed in order and count.
+
+```javascript
+let user:[number , string , boolean] = [32, "manash" , true];
+
+```
+
+### enums in typescript
+
+- In TypeScript, an enum is a way to define a collection of related values that can be numeric or string-based. It is used to give more readable and meaningful names to a set of values.
+
+- default value is set to 0 and following values will be in the incremental order
+
+- we can give mix and match values like string or number data type
+
+
+
+``` javascript
+const enum seatChoice  {
+     aisle,
+     middle,
+     window
+}
+
+const myseat = seatChoice.middle ;
+console.log(myseat);
+
+```
+
+- setting up string values
+- string values should not be empty
+
+
+``` javascript
+const enum seatChoice  {
+     AISLE = "aisle",
+     MIDDLE = "middle",
+     WINDOW = "window"
+}
+
+const myseat = seatChoice.MIDDLE ;
+console.log(myseat);
+
+```
+
+- giving  random values
+
+
+``` javascript
+const enum seatChoice {
+    AISLE = 32 ,
+    MIDDLE = 98,
+    WINDOW = 92
+}
+
+const user = seatChoice.WINDOW ;
+console.log(user);
+
+```
+
+### interface in typescript
+
+- In TypeScript, an interface is a way to define the structure of an object. It specifies the types of properties and methods an object must have. Interfaces are used to enforce type safety and improve code readability. 
+
+
 
 
 
