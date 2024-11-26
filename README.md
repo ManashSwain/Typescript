@@ -272,6 +272,145 @@ heros.map((hero)=>{
  }
 ```
 
+### objects in typescript
+
+## Usage/Examples
+
+```javascript
+
+
+const user = {
+    name : "manash",
+    email : "m@m.com",
+    isActive : true
+}
+```
+
+### functions that passes objects as an argument
+
+
+```javascript
+
+function createUser({ name, isPaid }: { name: string; isPaid: boolean }) {
+    console.log(name, isPaid);
+}
+
+createUser({ name: "manash", isPaid: true });
+
+```
+
+### functions that has objects as a return type
+
+
+```javascript
+
+function createCourse({ name, price, isPaid }: { name: string; price: number; isPaid: boolean }) {
+    return { name: "typescript", price: 645, isPaid: true };
+}
+
+const course = createCourse({ name: "React", price: 500, isPaid: false });
+console.log(course); // { name: "typescript", price: 645, isPaid: true }
+
+```
+
+### type aliases 
+
+- Lets say a function has many arguments .It will become lengthier to pass arguments. we can use key word type
+
+```javascript
+
+type User = {
+    name: string;
+    age: number;
+    isPaid: boolean;
+};
+
+function createUser(user: User) {
+    console.log(user);
+}
+
+// Correct usage:
+createUser({ name: "manash", age: 56, isPaid: true });
+
+```
+
+### readonly and optional fields(?)
+
+
+```javascript
+
+type newUser = {
+    readonly _id : number ,
+    name: string;
+    age: number;
+    isPaid: boolean;
+    creditCardDetails ? : number
+};
+
+function createUser(user: newUser) {
+    console.log(user);
+}
+
+// Correct usage:
+createUser({_id : 683, name: "manash", age: 56, isPaid: true });
+```
+
+
+### mix and match cases
+
+```javascript
+type cardNumber = {
+    cardnumber : number
+}
+
+type cardData = {
+    carddata : string
+}
+
+type cardDetails = cardNumber & cardData & {
+    cardDetails : string
+}
+
+const allData : cardDetails = {
+  cardnumber : 456567,
+  carddata : "hdfc-card",
+  cardDetails : "credit"
+}
+
+
+```
+### arrays
+
+```javascript
+
+const superHero : string[] = [] ;
+superHero.push("spiderman");
+superHero.push("batman");
+superHero.push("ironman");
+
+
+console.log(superHero);
+
+```
+
+### pushing objects in array
+
+```javascript
+
+type User = {
+    name : string,
+    age : number 
+}
+
+const allUser : User[] = []
+
+allUser.push({name : "manash" , age : 21})
+
+```
+
+
+
+
 
 
 
