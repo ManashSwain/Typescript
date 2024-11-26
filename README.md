@@ -575,6 +575,38 @@ console.log(user);
 
 - In TypeScript, an interface is a way to define the structure of an object. It specifies the types of properties and methods an object must have. Interfaces are used to enforce type safety and improve code readability. 
 
+```javascript
+
+
+
+interface User {
+    dbId: number;
+    email: string;
+    startcourse: () => boolean; 
+    startTrial(): boolean;
+    getCoupon: (couponName: string, validity: boolean) => string; 
+}
+
+const userone: User = {
+    dbId: 940423,
+    email: "m@m.com",
+    startcourse: () => { 
+        return false;
+    },
+    startTrial: () => {
+        return true;
+    },
+    getCoupon: (couponName: string, validity: boolean) => {
+        return "coupon applied";
+    },
+};
+
+console.log(userone);
+
+
+
+```
+
 
 
 
