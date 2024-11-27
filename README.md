@@ -148,7 +148,7 @@ const value : any = true;
 
 ## Functions in typescript 
 
-### numbers 
+### Numbers 
 
 ```javascript
 
@@ -159,7 +159,7 @@ addTwo(3);
 
 ```
 
-### strings
+### Strings
 
 
 ```javascript
@@ -171,7 +171,7 @@ toUpperCase("manash");
 
 ```
 
-### multiple values in function
+### Multiple values in function
 
 ```javascript
 
@@ -182,7 +182,7 @@ signUpUser("manash", "m@m.com" , false)
 
 ```
 
-### giving default values in function
+### Giving default values in function
 
 ```javascript
 
@@ -193,7 +193,7 @@ loginUser("manash", "m@m.com")
 
 ```
 
-### modifying default values in function
+### Modifying default values in function
 
 ```javascript
 
@@ -204,7 +204,7 @@ loginUser("manash", "m@m.com" , true)
 
 ```
 
-### better way to write functions
+### Better way to write functions
 
 ```javascript
 function addTwo(num : number): number{
@@ -212,7 +212,7 @@ function addTwo(num : number): number{
 }
 ```
 
-### arrow functions
+### Arrow functions
 
 ```javascript
 const greet = (s:string):string=>{
@@ -221,7 +221,7 @@ const greet = (s:string):string=>{
 ```
 
 
-### special functions when return value is unknown
+### Special functions when return value is unknown
 
 
 ```javascript
@@ -234,7 +234,7 @@ function getValue(myvalue : number){
 }
 
 ```
-### arrays and map
+### Arrays and map
 
 ```javascript
 const heros = ["thor" , "superman" , "spiderman"];
@@ -245,9 +245,9 @@ heros.map((hero)=>{
 
 ```
 
-### other types void and never
+### Other types void and never
 
-### void
+### Void
 
 - void is a case where function does not return anything
 
@@ -259,7 +259,7 @@ heros.map((hero)=>{
 ```
 
 
-### never
+### Never
 
 - never is same as void but incase of never we can do error handling
 
@@ -272,7 +272,7 @@ heros.map((hero)=>{
  }
 ```
 
-### objects in typescript
+### Objects in typescript
 
 ## Usage/Examples
 
@@ -286,7 +286,7 @@ const user = {
 }
 ```
 
-### functions that passes objects as an argument
+### Functions that passes objects as an argument
 
 
 ```javascript
@@ -299,7 +299,7 @@ createUser({ name: "manash", isPaid: true });
 
 ```
 
-### functions that has objects as a return type
+### Functions that has objects as a return type
 
 
 ```javascript
@@ -313,7 +313,7 @@ console.log(course); // { name: "typescript", price: 645, isPaid: true }
 
 ```
 
-### type aliases 
+### Type aliases 
 
 - Lets say a function has many arguments .It will become lengthier to pass arguments. we can use key word type
 
@@ -334,7 +334,7 @@ createUser({ name: "manash", age: 56, isPaid: true });
 
 ```
 
-### readonly and optional fields(?)
+### Readonly and optional fields(?)
 
 
 ```javascript
@@ -356,7 +356,7 @@ createUser({_id : 683, name: "manash", age: 56, isPaid: true });
 ```
 
 
-### mix and match cases
+### Mix and match cases
 
 ```javascript
 type cardNumber = {
@@ -379,7 +379,7 @@ const allData : cardDetails = {
 
 
 ```
-### arrays
+### Arrays
 
 ```javascript
 
@@ -393,7 +393,7 @@ console.log(superHero);
 
 ```
 
-### pushing objects in array
+### Pushing objects in array
 
 ```javascript
 
@@ -408,7 +408,7 @@ allUser.push({name : "manash" , age : 21})
 
 ```
 
-### array of array
+### Array of array
 
 ```javascript
 
@@ -433,7 +433,7 @@ console.log(score);
 
 ```
 
-### other union use cases 
+### Other union use cases 
 
 ```javascript
 
@@ -454,7 +454,7 @@ let loggedInUser : User | Admin = {
 
 ```
 
-###  performing an action based on particular data type
+###  Performing an action based on particular data type
 
 ```javascript
 
@@ -472,7 +472,7 @@ getPass("6832");
 
 ```
 
-### union in arrays
+### Union in arrays
 
 ```javascript
 
@@ -480,7 +480,7 @@ const data1:number[] = [12,34,112];
 const data2:string[] = ["batman" , "superman" , "spiderman"];
 
 ```
-### below case can hold either string or number data type but not both
+### Below case can hold either string or number data type but not both
 
 
 ```javascript
@@ -489,7 +489,7 @@ const data3 : number[] | string[] = ["marvel" , "bollywood"];
 
 ```
 
-### below case can hold mix and match of all data types
+### Below case can hold mix and match of all data types
 
 
 ```javascript
@@ -498,7 +498,7 @@ const data3 : (string | number | boolean)[] = ["marvel" , "bollywood" , 834 , 34
 
 ```
 
-### variable of exact match 
+### Variable of exact match 
 
 ```javascript
 
@@ -509,7 +509,7 @@ console.log(seat);
 ```
 
 
-### tuples 
+### Tuples 
 
 - In TypeScript, a tuple is a special type of array with a fixed number of elements, where each element has a specific type. It allows you to represent an array where the types of elements are known and fixed in order and count.
 
@@ -518,7 +518,7 @@ let user:[number , string , boolean] = [32, "manash" , true];
 
 ```
 
-### enums in typescript
+### Enums in typescript
 
 - In TypeScript, an enum is a way to define a collection of related values that can be numeric or string-based. It is used to give more readable and meaningful names to a set of values.
 
@@ -540,8 +540,8 @@ console.log(myseat);
 
 ```
 
-- setting up string values
-- string values should not be empty
+- Setting up string values
+- String values should not be empty
 
 
 ``` javascript
@@ -556,7 +556,7 @@ console.log(myseat);
 
 ```
 
-- giving  random values
+- Giving  random values
 
 
 ``` javascript
@@ -571,7 +571,7 @@ console.log(user);
 
 ```
 
-### interface in typescript
+### Interface in typescript
 
 - In TypeScript, an interface is a way to define the structure of an object. It specifies the types of properties and methods an object must have. Interfaces are used to enforce type safety and improve code readability. 
 
