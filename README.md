@@ -655,6 +655,61 @@ console.log(user)
 
 ```
 
+### Production setup for typescript
+
+Create a typescript config file
+
+```bash
+  tsc --init
+```
+
+Initialize npm package
+
+```bash
+  npm init -y
+```
+
+### Other steps
+
+- Create 2 folders  src and dist
+
+- Create a file index.ts in src and index.js in dist
+
+- Create index.html file.
+
+- Point the script tag to dist folder (index.js)
+
+- Uncomment outDir in tsconfig and setup the output directory path
+
+Run in watch mode
+
+```bash
+  tsc -w
+```
+
+- When we make changes in index.ts (src) .We can see the  changes in index.js file
+
+
+### classes in typescript
+
+``` javascript
+class Person {
+    name : string;
+    age : number
+    constructor(Name : string , Age : number){
+      this.name = Name ;
+      this.age = Age
+    }
+    greet(){
+        console.log(`Hello ${this.name} and your age is ${this.age}`) ;
+    }
+}
+
+const people = new Person("manash" , 32);
+people.greet();
+
+```
+
 
 
 
