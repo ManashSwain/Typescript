@@ -603,11 +603,57 @@ const userone: User = {
 
 console.log(userone);
 
+```
 
+### Other interface examples
+
+```javascript
+
+interface User {
+    dbId: number;
+    email: string;
+    userId : number
+}
+
+interface User {
+    githubId : number
+}
+
+const details : User= {
+
+    dbId: 65456,
+    email: "tkjldfg",
+    userId : 79954,
+    githubId : 654423
+   
+}
+
+console.log(details)
 
 ```
 
+### Interface with extends keyword
 
+```javascript
+
+interface Details {
+    dbId : string,
+    googleId : number,
+}
+
+interface User extends Details {
+    role : "admin" | "ta" | "learner" 
+}
+
+const user : User = {
+  dbId : "hjkfsd",
+  googleId : 7890,
+  role : "admin"
+}
+
+console.log(user)
+
+```
 
 
 
