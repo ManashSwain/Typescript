@@ -716,7 +716,27 @@ user.getDetails()
 
 ### Getter Example 
 
+``` javascript 
 
+class User {
+  _name : string ;
+  _age : number ;
+  _city  : string = "chennai";
+  constructor(name : string , age : number){
+     this._name = name ,
+     this._age = age
+  }
+
+   get getDetails() : string{
+    return (`My name is ${this._name} and my age is ${this._age}`) ;
+  }
+}
+
+const user = new User("manash" , 43);
+console.log(user.getDetails)
+
+
+```
 
 
 
