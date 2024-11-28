@@ -738,6 +738,59 @@ console.log(user.getDetails)
 
 ```
 
+### Setter Example in classes
+
+```javascript
+class User {
+  private _name: string;
+  private _age: number;
+  private _city: string = "chennai";
+  private _courseCount: number = 1;
+
+  constructor(name: string, age: number) {
+    this._name = name;
+    this._age = age;
+  }
+
+  // Getter for user details
+  get getDetails(): string {
+    return `My name is ${this._name}, and my age is ${this._age}.`;
+  }
+
+  // Getter for course count
+  get courseCount(): number {
+    return this._courseCount;
+  }
+
+  // Setter to update course count
+  set incrementCourseCount(course: number) {
+    if (course > 0) {
+      this._courseCount += course;
+    } else {
+      console.error("Course count must be a positive number.");
+    }
+  }
+}
+
+// Usage
+const user = new User("Manash", 43);
+
+// Accessing details
+console.log(user.getDetails); // Output: My name is Manash, and my age is 43.
+
+// Increment course count
+user.incrementCourseCount = 1; // Increment by 1
+console.log("Updated Course Count:", user.courseCount); // Output: Updated Course Count: 2
+
+user.incrementCourseCount = 3; // Increment by 3
+console.log("Updated Course Count:", user.courseCount); // Output: Updated Course Count: 5
+
+// Invalid course increment
+user.incrementCourseCount = -2; // Output: Course count must be a positive number.
+
+
+```
+
 
 
 
