@@ -693,20 +693,24 @@ Run in watch mode
 ### classes in typescript
 
 ``` javascript
-class Person {
-    name : string;
-    age : number
-    constructor(Name : string , Age : number){
-      this.name = Name ;
-      this.age = Age
-    }
-    greet(){
-        console.log(`Hello ${this.name} and your age is ${this.age}`) ;
-    }
+class User {
+  _name : string;
+  _age : number ;
+   readonly _city : string = "chennai"
+  constructor(name : string , age : number ){
+   this._name = name ;
+   this._age = age 
+  }
+
+  getDetails(){
+    console.log(`My name is ${this._name} and my age is  ${this._age}`)
+  }
 }
 
-const people = new Person("manash" , 32);
-people.greet();
+const user = new User("manash" , 21);
+user.getDetails()
+   
+   
 
 ```
 
