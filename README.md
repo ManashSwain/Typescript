@@ -714,6 +714,10 @@ user.getDetails()
 
 ```
 
+### Getter Example 
+
+
+
 
 
 
