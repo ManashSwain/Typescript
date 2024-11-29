@@ -887,6 +887,181 @@ console.log(derived.displayId()); // ✅ Accessible via subclass method
 ```
 
 
+### classes and derived classes example 
+
+``` javascript
+
+// Base class
+class Person {
+  public name: string;
+  public age: number;
+
+  constructor(name: string, age: number) {
+    this.name = name; // Assign the name property
+    this.age = age; // Assign the age property
+  }
+
+  public greet(): string {
+    return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+  }
+}
+
+// Derived class
+class Employee extends Person {
+  public jobTitle: string;
+
+  constructor(name: string, age: number, jobTitle: string) {
+    super(name, age); // Correctly pass name and age to the base class constructor
+    this.jobTitle = jobTitle; // Assign the jobTitle property
+  }
+
+  public getDetails(): string {
+    return `${this.greet()} I work as a ${this.jobTitle}.`;
+  }
+}
+
+// Create an instance of the derived class
+const employee = new Employee("Manash", 30, "Software Developer");
+console.log(employee.getDetails());
+
+
+```
+
+### Interface and Classes with implements and extends
+
+# TypeScript - Interface and Class Usage: `implements` and `extends`
+
+In TypeScript, you can create **interfaces** to define the structure of an object, and then **classes** can either implement an interface or extend another class.
+
+## 1. **Class Implements Interface** (`implements`)
+
+A class can **implement** an interface, ensuring it follows the structure defined by the interface.
+
+### Example:
+
+```typescript
+// Interface defining the structure
+interface Person {
+  name: string;
+  age: number;
+  greet(): string;
+}
+
+// Class implementing the interface
+class Employee implements Person {
+  name: string;
+  age: number;
+  jobTitle: string;
+
+  constructor(name: string, age: number, jobTitle: string) {
+    this.name = name;
+    this.age = age;
+    this.jobTitle = jobTitle;
+  }
+
+  greet(): string {
+    return `Hello, my name is ${this.name} and I am ${this.age} years old. I work as a ${this.jobTitle}.`;
+  }
+}
+
+// Create an instance of the class
+const employee = new Employee("Manash", 30, "Software Developer");
+console.log(employee.greet()); // Output: Hello, my name is Manash and I am 30 years old. I work as a Software Developer.
+
+
+ ```
+
+ ### Other Examples 
+
+ ###  implements => class to interface
+
+ ```javascript 
+
+ interface vehicle {
+    wheels : number ;
+    drive():void;
+}
+class car implements vehicle {
+    wheels : 4;
+    drive(){
+       console.log("I am driving") 
+    }
+    newfun(){
+        console.log("I have been added!")
+    }
+}
+
+let car1:car = new car();
+console.log(car1.newfun());
+console.log(car1.drive());
+
+ ```
+
+ ### extends class to class
+
+ ```javascript
+ class Animal {
+    sound : string;
+    constructor(sound : string){
+        this.sound = sound ;
+    }
+    makesound(){
+        console.log(this.sound);
+    }
+}
+
+class dog extends Animal {
+    bark(){
+        console.log('woof!')
+    }
+}
+
+let dog1 = new dog("bow bow");
+dog1.bark();
+dog1.makesound();
+
+
+ ```
+
+ ### extends interface to interface
+
+ ``` javascript
+
+ interface person {
+    name : string;
+}
+interface employee extends person {
+    eid : number;
+}
+
+const people : employee ={
+    name : "manash",
+    eid : 7
+}
+
+console.log(people);
+
+
+ 
+ ```
+
+ ## Summary Table
+
+| **Action**                   | **Syntax**                                          | **Explanation**                                                                                      |
+|------------------------------|----------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| **Class Implements Interface** | `class <ClassName> implements <InterfaceName>`      | Ensures the class adheres to the structure defined by the interface.                                 |
+| **Class Extends Class**       | `class <DerivedClass> extends <BaseClass>`          | Allows a class to inherit properties and methods from another class.                                 |
+| **Class Implements and Extends** | `class <ClassName> extends <BaseClass> implements <InterfaceName>` | A class can inherit from a base class and adhere to an interface simultaneously.                     |
+
+
+
+
+
+
+
+
+
+
 
 
 
