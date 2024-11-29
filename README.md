@@ -975,7 +975,7 @@ console.log(employee.greet()); // Output: Hello, my name is Manash and I am 30 y
 
  ###  implements => class to interface
 
- ```javascript 
+ ```typescript 
 
  interface vehicle {
     wheels : number ;
@@ -999,7 +999,8 @@ console.log(car1.drive());
 
  ### extends class to class
 
- ```javascript
+ ```typescript
+
  class Animal {
     sound : string;
     constructor(sound : string){
@@ -1025,7 +1026,7 @@ dog1.makesound();
 
  ### extends interface to interface
 
- ``` javascript
+ ``` typescript
 
  interface person {
     name : string;
