@@ -1057,6 +1057,76 @@ console.log(people);
 
 
 
+## Abstract Classes
+
+- An abstract class is a class that cannot be instantiated directly. It is meant to be inherited by other classes. It can contain both abstract methods (methods without implementation) and concrete methods (methods with implementation). An abstract class can define a blueprint for derived classes, enforcing that they implement the abstract methods.
+Characteristics of Abstract Class:
+
+- Cannot be instantiated directly: You cannot create an instance of an  abstract class directly.
+    Can contain abstract methods: These methods are declared in the abstract class but do not have a body. Derived classes are required to provide an implementation for these methods.
+    Can have concrete methods: Methods with implementation that can be inherited by subclasses.
+    Can have fields and constructors: It can have properties, and fields and can also define constructors.
+
+### Abstract Class Example 
+
+``` typescript
+abstract class Animal {
+  abstract makeSound(): void; // Abstract method (must be implemented in derived classes)
+
+  move(): void {
+    console.log('The animal moves');
+  }
+}
+
+class Dog extends Animal {
+  makeSound(): void {
+    console.log('Bark');
+  }
+}
+
+class Cat extends Animal {
+  makeSound(): void {
+    console.log('Meow');
+  }
+}
+
+const dog = new Dog();
+dog.makeSound(); // Output: Bark
+dog.move();      // Output: The animal moves
+
+// const animal = new Animal(); // Error: Cannot instantiate an abstract class
+
+```
+
+### Normal Class example
+
+``` typescript
+
+class Vehicle {
+  constructor(public brand: string, public model: string) {}
+
+  start(): void {
+    console.log(`${this.brand} ${this.model} is starting`);
+  }
+}
+
+const car = new Vehicle('Toyota', 'Camry');
+car.start(); // Output: Toyota Camry is starting
+
+
+```
+
+## Abstract Class vs Normal Class
+
+| **Feature**          | **Abstract Class**                                  | **Normal Class**                               |
+|-----------------------|----------------------------------------------------|-----------------------------------------------|
+| **Instantiation**     | Cannot be instantiated directly                    | Can be instantiated directly                  |
+| **Abstract Methods**  | Can contain abstract methods (without implementation) | Cannot contain abstract methods               |
+| **Concrete Methods**  | Can contain concrete methods (with implementation) | Can contain only concrete methods             |
+| **Inheritance**       | Meant to be extended/inherited by other classes    | Can be used as a base class or standalone     |
+| **Purpose**           | Provides a blueprint for derived classes           | Defines complete behavior and structure       |
+
+
 
 
 
