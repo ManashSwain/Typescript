@@ -811,7 +811,7 @@ TypeScript provides three access modifiers—**public**, **private**, and **prot
 
 ### 1. Public Modifier
 
-### 1. Public Modifier
+
 
 Members marked with `public` (or without an explicit modifier) are accessible from anywhere: inside the class, in derived classes, and outside the class.
 
@@ -838,7 +838,7 @@ console.log(pub.getDetails()); // ✅ Accessible
 
 ```
 
-## private modifiers
+## private modifier
 
 ```typescript
 
@@ -862,7 +862,7 @@ console.log(priv.getSecret()); // ✅ Accessible via method
 
 ```
 
-## Protected Modifier
+## Protected modifier
 
 ```javascript
 class Base {
