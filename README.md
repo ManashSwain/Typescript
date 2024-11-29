@@ -740,6 +740,8 @@ console.log(user.getDetails)
 
 ### Setter Example in classes
 
+- setter does not have a return type(type checking)
+
 ```javascript
 class User {
   private _name: string;
@@ -790,6 +792,100 @@ user.incrementCourseCount = -2; // Output: Course count must be a positive numbe
 
 
 ```
+
+
+### Public , private and protected 
+# Access Modifiers in TypeScript
+
+TypeScript provides three access modifiers—**public**, **private**, and **protected**—to control the visibility of class members (properties and methods). Here's a detailed comparison:
+
+| **Modifier** | **Description**                                                                 | **Accessible Within Class** | **Accessible in Derived Class** | **Accessible Outside Class** |
+|--------------|---------------------------------------------------------------------------------|-----------------------------|----------------------------------|------------------------------|
+| `public`     | Default modifier. Accessible from anywhere (inside or outside the class).       | ✅                           | ✅                                | ✅                            |
+| `private`    | Accessible only within the class it is declared in.                             | ✅                           | ❌                                | ❌                            |
+| `protected`  | Accessible within the class and its subclasses, but not outside of these.       | ✅                           | ✅                                | ❌                            |
+
+---
+
+## Examples
+
+### 1. Public Modifier
+
+### 1. Public Modifier
+
+Members marked with `public` (or without an explicit modifier) are accessible from anywhere: inside the class, in derived classes, and outside the class.
+
+```typescript
+
+class PublicExample {
+  public name: string; // Public property
+  public age: number; // Another public property
+
+  constructor(name: string, age: number) {
+    this.name = name; // Assign values
+    this.age = age;
+  }
+
+  public getDetails(): string { // Public method
+    return `Name: ${this.name}, Age: ${this.age}`;
+  }
+}
+
+const pub = new PublicExample("Manash", 30);
+console.log(pub.name); // ✅ Accessible
+console.log(pub.age); // ✅ Accessible
+console.log(pub.getDetails()); // ✅ Accessible
+
+```
+
+## private modifiers
+
+```typescript
+
+class PrivateExample {
+  private secret: string;
+
+  constructor(secret: string) {
+    this.secret = secret;
+  }
+
+  getSecret() {
+    return this.secret; // ✅ Accessible within the class
+  }
+}
+
+const priv = new PrivateExample("Top Secret");
+// console.log(priv.secret); // ❌ Error: Property 'secret' is private
+console.log(priv.getSecret()); // ✅ Accessible via method
+
+
+
+```
+
+## Protected Modifier
+
+```javascript
+class Base {
+  protected id: number;
+
+  constructor(id: number) {
+    this.id = id;
+  }
+}
+
+class Derived extends Base {
+  displayId() {
+    return this.id; // ✅ Accessible in subclass
+  }
+}
+
+const derived = new Derived(123);
+// console.log(derived.id); // ❌ Error: Property 'id' is protected
+console.log(derived.displayId()); // ✅ Accessible via subclass method
+
+
+```
+
 
 
 
